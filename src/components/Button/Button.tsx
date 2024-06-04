@@ -8,42 +8,46 @@ import * as Clipboard from "expo-clipboard";
 import copy from "../../../assets/copy.png";
 
 export function Btn() {
-  const [pass, setPass] = useState('');
-  const [numCarac, setNumCarac] = useState('');
-  const [copiar, setCopiar] = useState('COPIAR');
+  const [pass, setPass] = useState("");
+  const [numCarac, setNumCarac] = useState("");
+  const [copiar, setCopiar] = useState("COPIAR");
 
   function caracNumAndGenerate() {
     let generateToken = generatePass(numInput(numCarac));
     setPass(generateToken);
-    setCopiar('COPIAR');
-
+    setCopiar("COPIAR");
   }
-
 
   function handleCopyButton() {
     Clipboard.setStringAsync(pass);
-    setCopiar('COPIADO!');
+    setCopiar("COPIADO!");
   }
 
   return (
     <>
       <View style={styles.containerButton}>
         <Text style={styles.quantCaract}>Quantidade de caracteres:</Text>
-        <TextInput 
-        maxLength={2}
-        style={styles.numCarac}
-        inputMode="numeric" 
-        onChangeText={(newText) => setNumCarac(newText)}
+        <TextInput
+          maxLength={2}
+          style={styles.numCarac}
+          inputMode="numeric"
+          onChangeText={(newText) => setNumCarac(newText)}
         />
         <Text></Text>
         <Text style={styles.pressable} onPress={caracNumAndGenerate}>
           <Text style={styles.text}>GERAR SENHA</Text>
         </Text>
-        <TextInputPassword pass={pass}/>
+        <TextInputPassword pass={pass} />
         <Pressable onPress={handleCopyButton} style={styles.pressable}>
           <View style={styles.copy}>
-            <Image source={copy} />
-            <Text style={styles.text}>{copiar}</Text>
+            {copiar === "COPIAR" ? (
+              <>
+                <Image source={copy} />
+                <Text style={styles.text}>{copiar}</Text>
+              </>
+            ) : (
+              <Text style={styles.text}>{copiar}</Text>
+            )}
           </View>
         </Pressable>
       </View>
