@@ -11,9 +11,9 @@ export default function Home() {
       <View style={styles.appContainer}>
         <StatusBar style="light" />
         <Logo></Logo>
+        <Btn></Btn>
         <View style={styles.inputContainer}>
         </View>
-        <Btn></Btn>
       </View>
     </>
   );

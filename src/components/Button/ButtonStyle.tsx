@@ -11,10 +11,8 @@ export const styles = StyleSheet.create({
         lineHeight:21,
         letterSpacing:0.25,
         color:'black',
-        fontWeight:700,
+        fontWeight:"700",
         textAlign:'center'
-
-
     },
     pressable:{
         alignContent:'center',
@@ -24,6 +22,29 @@ export const styles = StyleSheet.create({
         elevation:7,
         borderRadius:8,
         textAlign:'center'
-
+    },
+    copy:{
+        display:'flex',
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    containerInput:{
+        textAlign:'center'
+    },
+    numCarac:{
+        backgroundColor:'pink',
+        width:40,
+        borderRadius:8,
+        alignSelf:'center',
+        padding:5,
+        fontSize:18,
+        fontWeight:'700',
+        color:'black',
+        textAlign:'center'
+    },
+    quantCaract:{
+        textAlign:'center',
+        color:'pink'
     }
 });
