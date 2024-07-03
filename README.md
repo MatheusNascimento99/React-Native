@@ -1,5 +1,4 @@
 # React-Native
-Estudos sobre tecnologia React Native
 Dei início aos estudos sobre React Native galera, é bastante interessante o poder dele, estou gostando bastante, esse app gera senhas automáticas de 8 digitos então você copia diretamente no botão e pode colar onde preferir, é simples mas foi um grande aprendizado construir ele, seguimos em frente!!!
 
 
