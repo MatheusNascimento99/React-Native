@@ -6,8 +6,6 @@ export const styles = StyleSheet.create({
     width: "auto",
     display:'flex',
     flexDirection: "column",
-    borderColor: "white",
-    borderWidth: 2,
     alignContent:'center',
     justifyContent:'center'
   },
@@ -19,11 +17,14 @@ export const stylesTitle = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     padding: 5,
+    width:"auto",
+
   },
 });
 
 export const stylesLogo = StyleSheet.create({
   img: {
+    width:"auto",
     resizeMode: "contain",
     height: 150,
     margin: 5,

@@ -40,8 +40,8 @@ export function Btn() {
           inputMode="numeric"
           onChangeText={(newText) => setNumCarac(newText)}
         />
-        <TouchableOpacity>
-          <Text style={styles.pressable} onPress={caracNumAndGenerate}>
+        <TouchableOpacity onPress={caracNumAndGenerate}>
+          <Text style={styles.pressable}>
             <Text style={styles.text}>GERAR SENHA</Text>
           </Text>
         </TouchableOpacity>
