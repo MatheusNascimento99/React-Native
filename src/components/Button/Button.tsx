@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, Pressable, Image, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { styles } from "./ButtonStyle";
 import generatePass from "../../services/passwordService";
 import numInput from "../../services/caracNum";
@@ -33,10 +40,12 @@ export function Btn() {
           inputMode="numeric"
           onChangeText={(newText) => setNumCarac(newText)}
         />
-        <Text></Text>
-        <Text style={styles.pressable} onPress={caracNumAndGenerate}>
-          <Text style={styles.text}>GERAR SENHA</Text>
-        </Text>
+        <TouchableOpacity>
+          <Text style={styles.pressable} onPress={caracNumAndGenerate}>
+            <Text style={styles.text}>GERAR SENHA</Text>
+          </Text>
+        </TouchableOpacity>
+
         <TextInputPassword pass={pass} />
         <Pressable onPress={handleCopyButton} style={styles.pressable}>
           <View style={styles.copy}>
